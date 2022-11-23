@@ -46,7 +46,7 @@ function renderBookList(bookList) {
 }
 
 async function renderBookWithID(id) {
-  const result = await fetch('https://gik2f8-labs.herokuapp.com/books/' + id)
+  await fetch('https://gik2f8-labs.herokuapp.com/books/' + id)
     .then((result) => result.json())
     .then((book) => {
       renderBookDetail(book)
@@ -71,6 +71,11 @@ function renderBookDetail(book) {
 }
 
 function positionElement(element, top, left) {
+
+  if ((top + element.offsetHeight) > window.innerHeight) {
+    top = window.innerHeight - element.offsetHeight;
+  }
+
   element.style.top = top + 'px';
   element.style.left = left + 'px';
 }
