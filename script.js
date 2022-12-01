@@ -70,7 +70,7 @@ function renderBookDetail(book) {
     document.getElementById('bookDetailContainer').innerHTML = BookDetail(book);
   } else {
     //Add the bookDetailContainer and the bookDetail card based on the html stored in the seperate js file
-    root.insertAdjacentHTML('beforeend', bookDetailContainer(book));
+    root.insertAdjacentHTML('beforeend', BookDetailContainer(book));
 
     bookDetailContainer = document.getElementById('bookDetailContainer');
 
