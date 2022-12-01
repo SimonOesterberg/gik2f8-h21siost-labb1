@@ -41,7 +41,7 @@ function renderBookList(bookList) {
     
     //On mouse leave, toggle visibility of the bookDetailContainer
     item.addEventListener('mouseleave', (e) => {
-      bookDetailContainer.classList.toggle("invisible");
+      bookDetailContainer.classList.toggle('invisible');
     })
 
     //On mouse move, keep the bookDetailContainer positioned at the cursors position
